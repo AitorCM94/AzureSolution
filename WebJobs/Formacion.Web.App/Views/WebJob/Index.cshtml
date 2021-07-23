@@ -1,0 +1,39 @@
+﻿@*Formulario para la carga de una imágen*@
+@*Utilizando Bootstrap*@
+
+@*modelo*@
+@model Formacion.Web.App.Controllers.WebJobController
+
+<div class="row">
+    @*Fila*@
+<div class="col-1"></div>@*Columnas. El ancho total es 12*@
+<div class="col-10">
+    <h2>Web Jobs</h2>
+    <h3>Carga de Ficheros - Almacenamiento Local (App Service)</h3>
+    <hr />@*Subraya-Salto de línea*@
+    <form method="post" enctype="multipart/form-data" action="/webjob/uploadfile">
+        @*Formulario. Método. Encoding. Acción-> Donde va a enviar el fichero (Controlador/método)*@
+    <input asp-for="UploadFileContent" type="file" /> @*Enlazar el contenido de este input con la propiedad*@
+    <br /><br />
+    <input type="submit" class="btn-success" value="Upload" />@*Input o Button. El tipo submit indica que cuando se pulsa envia el formulario. Clases de bootstrap para que salga bonito.*@
+</form>
+</div>
+<div class="col-1"></div>
+</div>
+
+<div class="row">
+    @*Fila*@
+    <div class="col-1"></div>@*Columnas. El ancho total es 12*@
+    <div class="col-10">
+        <h2>Web Jobs</h2>
+        <h3>Carga de Ficheros - Almacenamiento StorageAccount</h3>
+        <hr />@*Subraya-Salto de línea*@
+        <form method="post" enctype="multipart/form-data" action="/webjob/uploadfile">
+            @*Formulario. Método. Encoding. Acción-> Donde va a enviar el fichero (Controlador/método)*@
+            <input asp-for="UploadFileContent" type="file" /> @*Enlazar el contenido de este input con la propiedad*@
+            <br /><br />
+            <input type="submit" class="btn-success" value="Upload" />@*Input o Button. El tipo submit indica que cuando se pulsa envia el formulario. Clases de bootstrap para que salga bonito.*@
+        </form>
+    </div>
+    <div class="col-1"></div>
+</div>
